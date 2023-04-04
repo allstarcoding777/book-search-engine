@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const ApolloServer = require('apollo-server-express').ApolloServer;
 const {
   createUser,
   getSingleUser,
@@ -7,7 +8,7 @@ const {
   login,
 } = require('../../controllers/user-controller');
 
-// import middleware
+// import appollo middleware
 const { authMiddleware } = require('../../utils/auth');
 
 // put authMiddleware anywhere we need to send a token for verification of user
